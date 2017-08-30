@@ -33,10 +33,13 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'open-weather', github: 'coderhs/ruby_open_weather_map'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.6'
+  gem 'shoulda-matchers'
 end
 
 group :development do
