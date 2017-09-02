@@ -32,7 +32,7 @@ module.exports = {
   },
 
   module: {
-    rules: sync(join(loadersDir, '*.js')).map(loader => require(loader))
+    rules: sync(join(loadersDir, '*.js*')).map(loader => require(loader))
   },
 
   plugins: [
@@ -41,7 +41,12 @@ module.exports = {
     new ManifestPlugin({
       publicPath: output.publicPath,
       writeToFileEmit: true
-    })
+    }),
+    new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        jquery: 'jquery'
+      })
   ],
 
   resolve: {
@@ -49,9 +54,11 @@ module.exports = {
     modules: [
       resolve(settings.source_path),
       'node_modules'
-    ]
+    ],
+    alias: {
+      jquery: "jquery/src/jquery"
+    }
   },
-
   resolveLoader: {
     modules: ['node_modules']
   }
