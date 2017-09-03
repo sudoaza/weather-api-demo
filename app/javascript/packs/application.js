@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import {Page, SearchForm, SearchResults} from '../components/Page.jsx';
+import Page from '../components/Page.jsx';
 import jQuery from 'jquery'
 
 window.jQuery = jQuery

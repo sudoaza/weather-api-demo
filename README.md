@@ -19,14 +19,9 @@ Weather API
 Running the app
 ---------------
 
-For extra fun will be using React so we need to run webpack dev server
+Start the webpack server and rails with foreman
 
-    bin/webpack-dev-server --host 127.0.0.1
-
-
-Run rails server
-
-    rails s
+    foreman start
 
 
 Testing
@@ -35,6 +30,3 @@ Testing
 Using Rspec
 
     rspec
-
-
-
