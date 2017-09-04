@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       get 'cities/search'
       get 'cities/:id', to: 'cities#current'
+      get 'weather/coordinates', to: 'weather#coordinates'
     end
   end
 end
