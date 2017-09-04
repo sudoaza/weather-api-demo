@@ -1,11 +1,13 @@
 import React from 'react'
-import Search from './Search.jsx'
+import SearchCity from './SearchCity.jsx'
+import SearchCoordinates from './SearchCoordinates.jsx'
 
 export default class Page extends React.Component {
   render() {
     return (
       <div>
-        <Search />
+        <SearchCity /><br /><hr />
+        <SearchCoordinates />
       </div>
     );
   }

@@ -3,7 +3,7 @@ import SearchForm from './SearchForm.jsx'
 import SearchResults from './SearchResults.jsx'
 import Weather from './Weather.jsx'
 
-export default class Search extends React.Component {
+export default class SearchCity extends React.Component {
   constructor(props) {
     super(props);
     this.state = {searchResults: [], weather: {}};
